@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+		const course = 'RFB2';
+		const flightNumber = '20-AC2018-jz';
+		const accountNumber = '825242631RT0001';
+
+		const make = 'BMW';
+		const model = 'x5';
+		const color = 'Royal Blue';
+
+		//.startsWith()
+		course.startsWith('RFB'); // Returns true, no case insensitivity which requires regex
+		flightNumber.startsWith('AC', 3); // Returns true
+
+		//.endsWith()
+		flightNumber.endsWith('jz'); // Returns true
+		accountNumber.endsWith('RT', 11); // Returns true because it only looks at the first 11 numbers
+
+		//.includes() (like contains)
+		flightNumber.includes('AC'); //Returns true, case sensitive
+
+		//.repeat()
+		function leftPadded(str, length = 20) {
+			return `: ${' '.repeat(length - str.length)}${str}`;
+		}
+
+		console.log(leftPadded(make));
+		console.log(leftPadded(model));
+		console.log(leftPadded(color));
+
+		console.log(`${'goober' * 5}`.repeat(10) + ' Batman!');
+
+
+
+
+	</script>
+	
+</body>
+</html>
